@@ -70,7 +70,6 @@ impl<'a> LinearRegressionModel<'a> {
 		Sxy = Σ(xᵢ*yᵢ) - ((Σxᵢ) * (Σyᵢ)) / n    x̄ ȳ
 		Sxx = Σ(xᵢ^2) - (Σ(xᵢ^2))^2 / n
 		Syy = Σ(yᵢ^2) - (Σ(yᵢ^2))^2 / n
-		
 	*/
 	pub fn get_correlation_coefficient(&self) -> f32 {
 		let sxy = self.summation_xy - (self.summation_x * self.summation_y) / self.n;
@@ -90,12 +89,9 @@ fn sum_all(array: &[f32]) -> f32 {
 }
 
 fn multiply_two_arrays(a: &[f32], b: &[f32]) -> Vec<f32> {
-	
 	let mut result: Vec<f32> = Vec::new();
-	
 	for (x,y) in a.iter().zip(b.iter()) {
 		result.push(x*y);
 	}
-	
 	result
 }

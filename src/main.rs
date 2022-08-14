@@ -20,7 +20,7 @@ fn main() {
 		8.5, 7.5, 5.0, 4.0, 3.0, 5.0,
 		6.5, 10.0
 	];
-    let mut model = LinearRegressionModel::new(&x, &y);
+	let mut model = LinearRegressionModel::new(&x, &y);
 	model.train();
 	let n = model.predict(16.0);
 	println!("result: {n}");
