@@ -1,5 +1,5 @@
 mod linear_regression;
-use crate::linear_regression::LinearRegressionModel;
+use crate::linear_regression::model::LinearRegressionModel;
 use std::time::Instant;
 
 fn main() {
@@ -22,7 +22,7 @@ fn main() {
 	];
 	let mut model = LinearRegressionModel::new(&x, &y);
 	model.train();
-	let n = model.predict(16.0);
+	let n = model.predict(22.0);
 	println!("result: {n}");
 	println!("coefficient a: {}", model.a);
 	println!("coefficient b: {}", model.b);
